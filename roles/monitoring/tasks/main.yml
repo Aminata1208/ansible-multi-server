@@ -1,0 +1,6 @@
+---
+- name: Installer Nagios
+  apt:
+    name: nagios4
+    update_cache: yes
+    state: present

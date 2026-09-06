@@ -1,0 +1,13 @@
+---
+- name: INSTALL apache2
+  apt:
+    name: apache2
+    update_cache: yes
+    state: latest
+
+- name: ENABLED MOD_REWRITE
+  apache2_module:
+    name: rewrite
+    state: present
+  notify:
+    - RESTART APACHE2

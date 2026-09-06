@@ -1,0 +1,6 @@
+---
+- name: Configuration du serveur de base de données
+  hosts: databases
+  become: yes
+  roles:
+    - database
